@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
-
+node_modules/
+.env*
+.eslintignore
+.eslintrc.js
+.travis.yml
+.editorconfig
 # Log file
 *.log
 
