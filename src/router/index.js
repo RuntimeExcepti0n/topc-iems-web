@@ -69,8 +69,8 @@ export const constantRoutes = [
         meta: { title: '楼宇管理', icon: 'table' }
       },
       {
-        path: 'level',
-        name: 'levelMgr',
+        path: 'floor',
+        name: 'floorMgr',
         component: () => import('@/views/real-estate/floor/index'),
         meta: { title: '楼层管理', icon: 'tree' }
       },
