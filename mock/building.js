@@ -1,13 +1,14 @@
 import Mock from 'mockjs'
 
 const data = Mock.mock({
-  'items|1': [{
+  'items|2': [{
     id: '@id',
-    title: '@sentence(10, 20)',
-    'status|1': ['published', 'draft', 'deleted'],
-    author: 'name',
-    display_time: '@datetime',
-    pageviews: '@integer(300, 5000)'
+    image: '',
+    'managerName|1': ['张三','李四','小李飞刀'],
+    'status|1': ['在建', '出租中', '已租馨'],
+    buildingName: '华融大厦',
+    updateTime: '@datetime',
+    'localtion|1': ['广东省深圳市福田区','江苏省南京市玄武区']
   }]
 })
 
