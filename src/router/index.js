@@ -51,110 +51,138 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '仪表盘', icon: 'dashboard' }
     }]
   },
 
   {
-    path: '/example',
+    path: '/real-estate',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    redirect: '/real-estate/building',
+    name: 'realEstatetMgr',
+    meta: { title: '物业管理', icon: 'example' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'bulding',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/index'),
+        meta: { title: '楼宇管理', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
-      }
-    ]
-  },
-
-  {
-    path: '/nested',
-    component: Layout,
-    redirect: '/nested/menu1',
-    name: 'Nested',
-    meta: {
-      title: 'Nested',
-      icon: 'nested'
-    },
-    children: [
-      {
-        path: 'menu1',
-        component: () => import('@/views/nested/menu1/index'), // Parent router-view
-        name: 'Menu1',
-        meta: { title: 'Menu1' },
-        children: [
-          {
-            path: 'menu1-1',
-            component: () => import('@/views/nested/menu1/menu1-1'),
-            name: 'Menu1-1',
-            meta: { title: 'Menu1-1' }
-          },
-          {
-            path: 'menu1-2',
-            component: () => import('@/views/nested/menu1/menu1-2'),
-            name: 'Menu1-2',
-            meta: { title: 'Menu1-2' },
-            children: [
-              {
-                path: 'menu1-2-1',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-                name: 'Menu1-2-1',
-                meta: { title: 'Menu1-2-1' }
-              },
-              {
-                path: 'menu1-2-2',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-                name: 'Menu1-2-2',
-                meta: { title: 'Menu1-2-2' }
-              }
-            ]
-          },
-          {
-            path: 'menu1-3',
-            component: () => import('@/views/nested/menu1/menu1-3'),
-            name: 'Menu1-3',
-            meta: { title: 'Menu1-3' }
-          }
-        ]
+        path: 'addBuilding',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/add'),
+        meta: { title: '添加楼宇', icon: 'table' },
+        hidden: true
       },
       {
-        path: 'menu2',
-        component: () => import('@/views/nested/menu2/index'),
-        meta: { title: 'menu2' }
+        path: 'floor',
+        name: 'floorMgr',
+        component: () => import('@/views/real-estate/floor/index'),
+        meta: { title: '楼层管理', icon: 'tree' }
+      },
+      {
+        path: 'room',
+        name: 'roomMgr',
+        component: () => import('@/views/real-estate/room/index'),
+        meta: { title: '房源管理', icon: 'tree' }
+      },
+      {
+        path: 'contract',
+        name: 'contractMgr',
+        component: () => import('@/views/real-estate/contract/index'),
+        meta: { title: '合同管理', icon: 'tree' }
       }
     ]
   },
 
   {
-    path: 'external-link',
+    path: '/asset',
     component: Layout,
+    redirect: '/eal-estate/pc',
+    name: 'assetMgr',
+    meta: { title: '资产管理', icon: 'example' },
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: 'External Link', icon: 'link' }
+        path: 'pc',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/index'),
+        meta: { title: '电脑设备', icon: 'table' }
+      },
+      {
+        path: 'pc',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/index'),
+        meta: { title: '建筑设备', icon: 'table' }
+      }
+    ]
+  },
+  {
+    path: '/financial',
+    component: Layout,
+    redirect: '/eal-estate/pc',
+    name: 'assetMgr',
+    meta: { title: '财务管理', icon: 'example' },
+    children: [
+      {
+        path: 'pc',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/index'),
+        meta: { title: '电脑设备', icon: 'table' }
+      },
+      {
+        path: 'pc',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/index'),
+        meta: { title: '建筑设备', icon: 'table' }
+      }
+    ]
+  },
+  {
+    path: '/report',
+    component: Layout,
+    redirect: '/eal-estate/pc',
+    name: 'assetMgr',
+    meta: { title: '智能报表', icon: 'example' },
+    children: [
+      {
+        path: 'pc',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/index'),
+        meta: { title: '电脑设备', icon: 'table' }
+      },
+      {
+        path: 'pc',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/index'),
+        meta: { title: '建筑设备', icon: 'table' }
+      }
+    ]
+  },
+  {
+    path: '/setting',
+    component: Layout,
+    redirect: '/eal-estate/pc',
+    name: 'assetMgr',
+    meta: { title: '系统设置', icon: 'example' },
+    children: [
+      {
+        path: 'account',
+        name: 'accountMgr',
+        component: () => import('@/views/settings/account/index'),
+        meta: { title: '账号管理', icon: 'table' }
+      },
+      {
+        path: 'role',
+        name: 'roleMgr',
+        component: () => import('@/views/settings/role/index'),
+        meta: { title: '角色管理', icon: 'table' }
+      },
+      {
+        path: 'permission',
+        name: 'permissionMgr',
+        component: () => import('@/views/settings/permission/index'),
+        meta: { title: '权限管理', icon: 'table' }
       }
     ]
   },

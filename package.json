@@ -1,9 +1,9 @@
 {
-  "name": "vue-admin-template",
+  "name": "topc-iems-web",
   "version": "4.2.1",
-  "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
-  "author": "Pan <panfree23@gmail.com>",
-  "license": "MIT",
+  "description": "Topc Intelligent Estate Managment System",
+  "author": "zaqweb <zaqweb@live.com>",
+  "license": "Apache2",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build:prod": "vue-cli-service build",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "axios": "0.18.1",
-    "element-ui": "2.7.2",
+    "element-ui": "2.10.1",
     "js-cookie": "2.2.0",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",
@@ -43,7 +43,6 @@
     "eslint-plugin-vue": "5.2.2",
     "html-webpack-plugin": "3.2.0",
     "mockjs": "1.0.1-beta3",
-    "node-sass": "^4.9.0",
     "runjs": "^4.3.2",
     "sass-loader": "^7.1.0",
     "script-ext-html-webpack-plugin": "2.1.3",
