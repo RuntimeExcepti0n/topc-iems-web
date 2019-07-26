@@ -69,6 +69,13 @@ export const constantRoutes = [
         meta: { title: '楼宇管理', icon: 'table' }
       },
       {
+        path: 'addBuilding',
+        name: 'buildingMgr',
+        component: () => import('@/views/real-estate/building/add'),
+        meta: { title: '添加楼宇', icon: 'table' },
+        hidden: true
+      },
+      {
         path: 'floor',
         name: 'floorMgr',
         component: () => import('@/views/real-estate/floor/index'),
